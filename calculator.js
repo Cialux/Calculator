@@ -17,24 +17,27 @@ const equal = document.getElementById("equal");
 const header = document.getElementById("header");
 
 let a = " ";
-let b;
+let b = " ";
+let temp;
 
 let plusCheck = false;
 let minusCheck = false;
 let divCheck = false;
 let multiCheck = false;
+let operatorClicked = 0;
+let currentOperator = "";
 
 
-one.addEventListener('click', ONE);
-two.addEventListener('click', TWO);
-three.addEventListener('click', THREE);
-four.addEventListener('click', FOUR);
-five.addEventListener('click', FIVE);
-six.addEventListener('click', SIX);
-seven.addEventListener('click', SEVEN);
-eight.addEventListener('click', EIGHT);
-nine.addEventListener('click', NINE);
-zero.addEventListener('click', ZERO);
+one.addEventListener('click', ONEE);
+two.addEventListener('click', TWOE);
+three.addEventListener('click', THREEE);
+four.addEventListener('click', FOURE);
+five.addEventListener('click', FIVEE);
+six.addEventListener('click', SIXE);
+seven.addEventListener('click', SEVENE);
+eight.addEventListener('click', EIGHTE);
+nine.addEventListener('click', NINEE);
+zero.addEventListener('click', ZEROE);
 plus.addEventListener('click', setTruePlus);
 minus.addEventListener('click', setTrueMinus);
 divide.addEventListener('click', setTrueDivide);
@@ -42,229 +45,256 @@ multiply.addEventListener('click', setTrueMultiply);
 clear.addEventListener('click', clearing);
 equal.addEventListener('click', calculate);
 
+function ONEE() {
+    if (operatorClicked == 1) {
+        if (b == " ") {
+            b = "1";
+            header.innerHTML = `${a} ${currentOperator} ${b}`
+        }else {
+            b = b + "1";
+            header.innerHTML = `${a} ${currentOperator} ${b}`
+        }
+    }else {
+        if (a == " ") {
+            a = "1";
+            header.innerHTML = `${a}`
+        }else {
+            a = a + "1";
+            header.innerHTML = `${a}`
+        }
+    }
+}
+
+function TWOE() {
+    if (operatorClicked == 1) {
+        if (b == " ") {
+            b = "2";
+            header.innerHTML = `${a} ${currentOperator} ${b}`
+        }else {
+            b = b + "2";
+            header.innerHTML = `${a} ${currentOperator} ${b}`
+        }
+
+    }else {
+        if (a == " ") {
+            a = "2";
+            header.innerHTML = `${a}`
+        }else {
+            a = a + "2";
+            header.innerHTML = `${a}`
+        }
+    }
+}
+
+function THREEE() {
+    if (operatorClicked == 1) {
+        if (b == " ") {
+            b = "3";
+            header.innerHTML = `${a} ${currentOperator} ${b}`
+        }else {
+            b = b + "3";
+            header.innerHTML = `${a} ${currentOperator} ${b}`
+        }
+
+    }else {
+        if (a == " ") {
+            a = "3";
+            header.innerHTML = `${a}`
+        }else {
+            a = a + "3";
+            header.innerHTML = `${a}`
+        }
+    }
+}
+
+function FOURE() {
+    if (operatorClicked == 1) {
+        if (b == " ") {
+            b = "4";
+            header.innerHTML = `${a} ${currentOperator} ${b}`
+        }else {
+            b = b + "4";
+            header.innerHTML = `${a} ${currentOperator} ${b}`
+        }
+
+    }else {
+        if (a == " ") {
+            a = "4";
+            header.innerHTML = `${a}`
+        }else {
+            a = a + "4";
+            header.innerHTML = `${a}`
+        }
+    }
+}
+
+function FIVEE() {
+    if (operatorClicked == 1) {
+        if (b == " ") {
+            b = "5";
+            header.innerHTML = `${a} ${currentOperator} ${b}`
+        }else {
+            b = b + "5";
+            header.innerHTML = `${a} ${currentOperator} ${b}`
+        }
+
+    }else {
+        if (a == " ") {
+            a = "5";
+            header.innerHTML = `${a}`
+        }else {
+            a = a + "5";
+            header.innerHTML = `${a}`
+        }
+    }
+}
+
+function SIXE() {
+    if (operatorClicked == 1) {
+        if (b == " ") {
+            b = "6";
+            header.innerHTML = `${a} ${currentOperator} ${b}`
+        }else {
+            b = b + "6";
+            header.innerHTML = `${a} ${currentOperator} ${b}`
+        }
+
+    }else {
+        if (a == " ") {
+            a = "6";
+            header.innerHTML = `${a}`
+        }else {
+            a = a + "6";
+            header.innerHTML = `${a}`
+        }
+    }
+}
+
+function SEVENE() {
+    if (operatorClicked == 1) {
+        if (b == " ") {
+            b = "7";
+            header.innerHTML = `${a} ${currentOperator} ${b}`
+        }else {
+            b = b + "7";
+            header.innerHTML = `${a} ${currentOperator} ${b}`
+        }
+
+    }else {
+        if (a == " ") {
+            a = "7";
+            header.innerHTML = `${a}`
+        }else {
+            a = a + "7";
+            header.innerHTML = `${a}`
+        }
+    }
+}
+
+function EIGHTE() {
+    if (operatorClicked == 1) {
+        if (b == " ") {
+            b = "8";
+            header.innerHTML = `${a} ${currentOperator} ${b}`
+        }else {
+            b = b + "8";
+            header.innerHTML = `${a} ${currentOperator} ${b}`
+        }
+
+    }else {
+        if (a == " ") {
+            a = "8";
+            header.innerHTML = `${a}`
+        }else {
+            a = a + "8";
+            header.innerHTML = `${a}`
+        }
+    }
+}
+
+function NINEE() {
+    if (operatorClicked == 1) {
+        if (b == " ") {
+            b = "9";
+            header.innerHTML = `${a} ${currentOperator} ${b}`
+        }else {
+            b = b + "9"
+            header.innerHTML = `${a} ${currentOperator} ${b}`
+        }
+
+    }else {
+        if (a == " ") {
+            a = "9";
+            header.innerHTML = `${a}`
+        }else {
+            a = a + "9";
+            header.innerHTML = `${a}`
+        }
+    }
+}
+
+function ZEROE() {
+    if (operatorClicked == 1) {
+        if (b == " ") {
+            b = "0";
+            header.innerHTML = `${a} ${currentOperator} ${b}`
+        }else {
+            b = b + "0"
+            header.innerHTML = `${a} ${currentOperator} ${b}`
+        }
+
+    }else {
+        if (a == " ") {
+            a = "0";
+            header.innerHTML = `${a}`
+        }else {
+            a = a + "0";
+            header.innerHTML = `${a}`
+        }
+    }
+}
+
 function clearing() {
-    let a = " ";
-    let b;
-    let plusCheck = false;
-    let minusCheck = false;
-    let divCheck = false;
-    let multiCheck = false;
+    a = " ";
+    b = " ";
+    plusCheck = false;
+    minusCheck = false;
+    divCheck = false;
+    multiCheck = false;
+    header.innerHTML = "";
     console.log("Cleared")
 }
 
-
-function ONE() {
-    if (Number.isInteger(a)) {
-        b = 1;
-        if (plusCheck == true) {
-            header.innerHTML = (`${a} + ${b}`);
-        }else if (minusCheck == true){
-            header.innerHTML = (`${a} - ${b}`);
-        }else if (divCheck == true){
-            header.innerHTML = (`${a} / ${b}`);
-        }else if (multiCheck == true){
-            header.innerHTML = (`${a} * ${b}`);
-        }else {
-            return "broken";
-        }
-    }else {
-        a = 1;
-        header.innerHTML = a
-    }
-}
-function TWO() {
-    if (Number.isInteger(a)) {
-        b = 2;
-        if (plusCheck == true) {
-            header.innerHTML = (`${a} + ${b}`);
-        }else if (minusCheck == true){
-            header.innerHTML = (`${a} - ${b}`);
-        }else if (divCheck == true){
-            header.innerHTML = (`${a} / ${b}`);
-        }else if (multiCheck == true){
-            header.innerHTML = (`${a} * ${b}`);
-        }else {
-            return "broken";
-        }
-    }else {
-        a = 2;
-        header.innerHTML = a
-    }
-}
-function THREE() {
-    if (Number.isInteger(a)) {
-        b = 3;
-        if (plusCheck == true) {
-            header.innerHTML = (`${a} + ${b}`);
-        }else if (minusCheck == true){
-            header.innerHTML = (`${a} - ${b}`);
-        }else if (divCheck == true){
-            header.innerHTML = (`${a} / ${b}`);
-        }else if (multiCheck == true){
-            header.innerHTML = (`${a} * ${b}`);
-        }else {
-            return "broken";
-        }
-    }else {
-        a = 3;
-        header.innerHTML = a
-    }
-}
-function FOUR() {
-    if (Number.isInteger(a)) {
-        b = 4;
-        if (plusCheck == true) {
-            header.innerHTML = (`${a} + ${b}`);
-        }else if (minusCheck == true){
-            header.innerHTML = (`${a} - ${b}`);
-        }else if (divCheck == true){
-            header.innerHTML = (`${a} / ${b}`);
-        }else if (multiCheck == true){
-            header.innerHTML = (`${a} * ${b}`);
-        }else {
-            return "broken";
-        }
-    }else {
-        a = 4;
-        header.innerHTML = a
-    }
-}
-function FIVE() {
-    if (Number.isInteger(a)) {
-        b = 5;
-        if (plusCheck == true) {
-            header.innerHTML = (`${a} + ${b}`);
-        }else if (minusCheck == true){
-            header.innerHTML = (`${a} - ${b}`);
-        }else if (divCheck == true){
-            header.innerHTML = (`${a} / ${b}`);
-        }else if (multiCheck == true){
-            header.innerHTML = (`${a} * ${b}`);
-        }else {
-            return "broken";
-        }
-    }else {
-        a = 5;
-        header.innerHTML = a
-    }
-}
-function SIX() {
-    if (Number.isInteger(a)) {
-        b = 6;
-        if (plusCheck == true) {
-            header.innerHTML = (`${a} + ${b}`);
-        }else if (minusCheck == true){
-            header.innerHTML = (`${a} - ${b}`);
-        }else if (divCheck == true){
-            header.innerHTML = (`${a} / ${b}`);
-        }else if (multiCheck == true){
-            header.innerHTML = (`${a} * ${b}`);
-        }else {
-            return "broken";
-        }
-    }else {
-        a = 6;
-        header.innerHTML = a
-    }
-}
-function SEVEN() {
-    if (Number.isInteger(a)) {
-        b = 7;
-        if (plusCheck == true) {
-            header.innerHTML = (`${a} + ${b}`);
-        }else if (minusCheck == true){
-            header.innerHTML = (`${a} - ${b}`);
-        }else if (divCheck == true){
-            header.innerHTML = (`${a} / ${b}`);
-        }else if (multiCheck == true){
-            header.innerHTML = (`${a} * ${b}`);
-        }else {
-            return "broken";
-        }
-    }else {
-        a = 7;
-        header.innerHTML = a
-    }
-}
-function EIGHT() {
-    if (Number.isInteger(a)) {
-        b = 8;
-        if (plusCheck == true) {
-            header.innerHTML = (`${a} + ${b}`);
-        }else if (minusCheck == true){
-            header.innerHTML = (`${a} - ${b}`);
-        }else if (divCheck == true){
-            header.innerHTML = (`${a} / ${b}`);
-        }else if (multiCheck == true){
-            header.innerHTML = (`${a} * ${b}`);
-        }else {
-            return "broken";
-        }
-    }else {
-        a = 8;
-        header.innerHTML = a
-    }
-}
-function NINE() {
-    if (Number.isInteger(a)) {
-        b = 9;
-        if (plusCheck == true) {
-            header.innerHTML = (`${a} + ${b}`);
-        }else if (minusCheck == true){
-            header.innerHTML = (`${a} - ${b}`);
-        }else if (divCheck == true){
-            header.innerHTML = (`${a} / ${b}`);
-        }else if (multiCheck == true){
-            header.innerHTML = (`${a} * ${b}`);
-        }else {
-            return "broken";
-        }
-    }else {
-        a = 9;
-        header.innerHTML = a
-    }
-}
-function ZERO() {
-    if (Number.isInteger(a)) {
-        b = 0;
-        if (plusCheck == true) {
-            header.innerHTML = (`${a} + ${b}`);
-        }else if (minusCheck == true){
-            header.innerHTML = (`${a} - ${b}`);
-        }else if (divCheck == true){
-            header.innerHTML = (`${a} / ${b}`);
-        }else if (multiCheck == true){
-            header.innerHTML = (`${a} * ${b}`);
-        }else {
-            return "broken";
-        }
-    }else {
-        a = 0;
-        header.innerHTML = a
-    }
-}
-
-
 function setTruePlus() {
+    currentOperator = "+";
+    operatorClicked = 1;
+    console.log(operatorClicked);
     plusCheck = true;
     header.innerHTML = (`${a} + `);
 }
 function setTrueMinus() {
+    currentOperator = "-";
+    operatorClicked = 1;
     minusCheck = true;
     header.innerHTML = (`${a} - `);
 }
 function setTrueDivide() {
+    currentOperator = "/";
+    operatorClicked = 1;
     divCheck = true;
     header.innerHTML = (`${a} / `);
 }
 function setTrueMultiply() {
+    currentOperator = "*";
+    operatorClicked = 1;
     multiCheck = true;
     header.innerHTML = (`${a} * `);
 }
 
 function calculate() {
+    a = parseInt(a);
+    b = parseInt(b);
     if (plusCheck == true) {
-        console.log("plus")
         let sum = a + b;
         header.innerHTML = sum;
     }else if (minusCheck == true){
